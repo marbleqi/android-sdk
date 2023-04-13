@@ -14,3 +14,5 @@ WORKDIR /opt
 COPY --from=builder /sdks/flutter ./flutter
 COPY --from=builder /opt/android-sdk-linux ./android-sdk
 COPY --from=builder2 /opt/gradle ./gradle
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
