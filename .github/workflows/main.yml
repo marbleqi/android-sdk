@@ -14,8 +14,8 @@ jobs:
     - name: 制作镜像并推送到私有仓库
       run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD registry.cn-beijing.aliyuncs.com
-        docker build -t registry.cn-beijing.aliyuncs.com/marbleqi/appsdk .
-        docker push registry.cn-beijing.aliyuncs.com/marbleqi/appsdk
+        docker build -t registry.cn-beijing.aliyuncs.com/marbleqi/jenkins .
+        docker push registry.cn-beijing.aliyuncs.com/marbleqi/jenkins
       env: 
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
